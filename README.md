@@ -1,8 +1,13 @@
 # Testing CSharp
 
+Objective => learn how to generate, manage and work with unit test in C#.
+<br>
+More informations about Tests [here](https://github.com/VictorMauroy/Testing-Lesson).
+*(Note: This is an ongoing documentation link)*
+
 ## 1) Start a .NET console project.
 ### Linux
-Download and install Dotnet (SDK & Runtime): 
+Download and install Dotnet (Include SDK & Runtime): 
 ```bash
 sudo apt-get update && \
   sudo apt-get install -y dotnet-sdk-7.0
@@ -18,7 +23,7 @@ Create a .NET console project:
 dotnet new console -o <MyProject>
 ```
 ### Windows
-Download and install [Dotnet](https://dotnet.microsoft.com/en-us/download) (SDK & Runtime).
+Download and install [Dotnet](https://dotnet.microsoft.com/en-us/download) (Include SDK & Runtime).
 
 Download and install [Visual Studio Community](https://visualstudio.microsoft.com/fr/free-developer-offers/).
 <br> You can also install Enterprise or Professionnal (Paid version).
@@ -29,4 +34,12 @@ Create a console project:
 1. Select "Console Application"
 1. Configure and create
 
+-------------------------- 
+
+***WORK IN PROGRESS***
+
+--------------------------
+
 ## 2) Create functions or methods
+
+## 3) Generate unit tests
