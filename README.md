@@ -153,13 +153,6 @@ here is the procedure to follow:
 *Note: the rest of the tutorial uses an MSTest test project.*
 
 
--------------------------- 
-
-***WORK IN PROGRESS***
-
---------------------------
-
-
 ### Tests on static class
 The following script shows how to write a test that works with a `static class`.
 ```csharp
@@ -230,6 +223,17 @@ If both values are equal, the test is a success, otherwise it will indicate that
 between the expected value and the result.
 
 ### Launch tests
+In order to launch tests, you can right click everywhere inside a C# script
+or inside the Solution Explorer. You will then find an action named **Execute all tests**.
+<br>
+It will opens a new windows and **automaticaly run every tests** contained in your current project.
+
+![Execute all tests](./Ressources/runTests.png)
+
+You could also open the **Test** category window (at the top of Visual Studio) and access
+the **Test Explorer** and then **run all**.
+
+
 
 
 
