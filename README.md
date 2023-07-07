@@ -5,7 +5,16 @@
 More informations about Tests [here](https://github.com/VictorMauroy/Testing-Lesson).
 *(Note: This is an ongoing documentation link)*
 
-
+<details>
+<summary> Caution (fork) </summary>
+The Current project will not build correctly.
+<br>
+To be able to add my unit test on Github, 
+I had to move the folder corresponding to my Project "Testing CSharpTests" into the folder of "Testing CSharp". 
+Otherwise, github couldn't see the files because they aren't in the target repository.
+<br> <br>
+You should remove the folder "Testing CSharpTests" and generate new Unit Test in order for the project to build and run tests.
+</details>
 
 
 ## 1) Start a .NET console project.
@@ -198,7 +207,6 @@ public class CatTests
         // Assert
         Assert.AreEqual(weigthIncreased, catTest.Weigth);
     }
-
 }
 ```
 
@@ -214,7 +222,3 @@ Open the **Test** window > **Test Explorer** > **Options** > **Execute after bui
 
 Unit test when writing code: https://www.ncrunch.net/
 
-
-
-***Project note:*** <br> 
-To be able to add my unit test on Github, I had to move the folder corresponding to my Project "Testing CSharpTests" into the folder of "Testing CSharp". Otherwise, github won't see the files because they aren't in the target repository.
