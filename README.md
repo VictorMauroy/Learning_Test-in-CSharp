@@ -1,7 +1,7 @@
 # Testing CSharp
 
-Objective => learn how to generate, manage and work with unit test in C#.
-<br>
+**Objective** => learn how to generate, manage and work with unit test in C#.
+
 More informations about Tests [here](https://github.com/VictorMauroy/Testing-Lesson).
 *(Note: This is an ongoing documentation link)*
 
@@ -144,16 +144,67 @@ here is the procedure to follow:
 *Note: the rest of the tutorial uses an MSTest test project.*
 
 
-
-
-
-
 -------------------------- 
 
 ***WORK IN PROGRESS***
 
 --------------------------
 
+
+### Tests on static class
+
+```csharp
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Testing_CSharp; //remember to import your classes
+
+[TestClass()]
+public class ComputationTests
+{
+    [TestMethod()]
+    public void GetDivisionTest1()
+    {
+        // Act
+        float test1 = Computation.GetDivision(2, 1);
+
+        // Assert
+        Assert.AreEqual(2, test1);
+    }
+}
+```
+
+
+### Tests on public class / object class
+
+```csharp
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Testing_CSharp;
+
+[TestClass()]
+public class CatTests
+{
+    [TestMethod()]
+    public void RaiseWeigth_ReturnIncreasedWeigth()
+    {
+        // Arrange
+        float weigth = 3f;
+        float weigthDiff = 1f;
+        float weigthIncreased = 4f;
+
+        Cat catTest = new Cat("Grominet", weigth);
+
+        // Act
+        catTest.RaiseWeigth(weigthDiff);
+
+        // Assert
+        Assert.AreEqual(weigthIncreased, catTest.Weigth);
+    }
+
+}
+```
+
+
+
+### Launch tests
 
 
 
