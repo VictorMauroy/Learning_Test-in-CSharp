@@ -51,3 +51,8 @@ Unit test on build:
 Open the **Test** window > **Test Explorer** > **Options** > **Execute after build**.
 
 Unit test when writing code: https://www.ncrunch.net/
+
+
+
+***Project note:*** <br> 
+To be able to add my unit test on Github, I had to move the folder corresponding to my Project "Testing CSharpTests" into the folder of "Testing CSharp". Otherwise, github won't see the files because they aren't in the target repository.
