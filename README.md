@@ -7,7 +7,8 @@ More informations about Tests [here](https://github.com/VictorMauroy/Testing-Les
 
 ## 1) Start a .NET console project.
 ### Linux
-Download and install Dotnet (Include SDK & Runtime): 
+Download and install **Visual Studio Code**. <br>
+Download and install **Dotnet** (Include SDK & Runtime): 
 ```bash
 sudo apt-get update && \
   sudo apt-get install -y dotnet-sdk-7.0
@@ -32,7 +33,7 @@ Create a console project:
 1. Open Visual Studio
 1. New Project
 1. Select "Console Application"
-1. Configure and create
+1. Customize your project and create it
 
 -------------------------- 
 
@@ -41,6 +42,70 @@ Create a console project:
 --------------------------
 
 ## 2) Create functions or methods
+In order to perform test, you'll need to create a few functions or a class with methods.
+
+Let's create a static class which can be called without defining an object, and another which is a public class with properties and methods.
+
+### Static class
+A **static** class is a special type of class which doesn't need to define an object to access the methods.
+```csharp
+public static class Computation
+{
+    public static float GetDivision(int dividend, int divisor)
+    {
+        return dividend / (float)divisor;
+        // Note: Convert divisor as float to avoid getting a rounded integer
+    }
+}
+```
+For that specific class, you can call the methods by doing so:
+```csharp
+float quotient = Computation.GetDivision(19, 13);
+```
+*Note: do not forget to import it with a "using" statement.
+You can also use a namespace.*
+
+### Public class with properties and methods
+By defining a class as **public**, you make it accessible from outside the script.
+
+Here is an example:
+```csharp
+public class Cat
+{
+    public string Name { get; set; }
+    public float Weigth { get; set; }
+
+    // Constructor for the Cat class.
+    public Cat(string name, float weigth) 
+    {
+        Name = name;
+        Weigth = weigth;
+    }
+        
+    public float RaiseWeigth(float weigthToAdd)
+    {
+        Weigth+= weigthToAdd;
+        return Weigth;
+    }
+}
+```
+We defined a class to create Cat objects. 
+Our cats can get a customized name and weigth.
+<br> 
+There is also a method to increase its weigth that we are going to use for our tests.
+
+You can define a new cat by doing so:
+```csharp
+string myCatName = "Kitty";
+float myCatWeigth = 1.5f;
+
+Cat kitty = new Cat(
+    myCatName,
+    myCatWeigth
+);
+
+kitty.RaiseWeigth(0.5f); //This is how to use the RaiseWeigth method.
+```
 
 ## 3) Generate unit tests
 
