@@ -43,3 +43,11 @@ Create a console project:
 ## 2) Create functions or methods
 
 ## 3) Generate unit tests
+
+[Best practices for Test in C#](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices)
+
+## 4) Automatic unit test
+Unit test on build: 
+Open the **Test** window > **Test Explorer** > **Options** > **Execute after build**.
+
+Unit test when writing code: https://www.ncrunch.net/
