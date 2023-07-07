@@ -161,7 +161,7 @@ here is the procedure to follow:
 
 
 ### Tests on static class
-
+The following script shows how to write a test that works with a `static class`.
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Testing_CSharp; //remember to import your classes
@@ -180,10 +180,16 @@ public class ComputationTests
     }
 }
 ```
+To obtain an effective test, you need to call the desired function and 
+then use the Assert.AreEqual method.
+<br>
+In that example, the Assert.AreEqual(value1, value2) checks whether both values are equals, 
+if yes then the test is a success.
 
+*Note: You can use other Assert methods, depending of the output of your method and the objective of your test.*
 
 ### Tests on public class / object class
-
+The following script shows how to write a test that works with a `public class` that uses properties and methods.
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Testing_CSharp;
@@ -209,8 +215,19 @@ public class CatTests
     }
 }
 ```
+Thanks to the attributes `[TestClass()]` and `[TestMethod()]`,
+Visual Studio can determine that the class and the defined methods are used to run tests.
 
+To make a valid test, we need to **define an object** with its constructor.
+In this case `Cat test = new Cat(...);`.
+<br>
+Then, we **called the method** to test `RaiseWeigth` throught our object.
+<br>
+Finally, we **check if the result of the test correspond to the expected value**
+by calling `Assert.AreEqual(expectedValue, catWeigthValue)`.
 
+If both values are equal, the test is a success, otherwise it will indicate that there is a difference
+between the expected value and the result.
 
 ### Launch tests
 
