@@ -5,6 +5,9 @@ Objective => learn how to generate, manage and work with unit test in C#.
 More informations about Tests [here](https://github.com/VictorMauroy/Testing-Lesson).
 *(Note: This is an ongoing documentation link)*
 
+
+
+
 ## 1) Start a .NET console project.
 ### Linux
 Download and install **Visual Studio Code**. <br>
@@ -35,11 +38,9 @@ Create a console project:
 1. Select "Console Application"
 1. Customize your project and create it
 
--------------------------- 
 
-***WORK IN PROGRESS***
 
---------------------------
+
 
 ## 2) Create functions or methods
 In order to perform test, you'll need to create a few functions or a class with methods.
@@ -107,9 +108,54 @@ Cat kitty = new Cat(
 kitty.RaiseWeigth(0.5f); //This is how to use the RaiseWeigth method.
 ```
 
+
+
+
 ## 3) Generate unit tests
 
-[Best practices for Test in C#](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices)
+First of all, I recommend you to check that link: [Best practices for Test in C#](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices).
+
+Then, let's see how to create test for our two type of classes.
+
+### Generation
+With Visual Studio (Community, Professionnal and Enterprise), 
+there is an incredible option to **generate unit test** (which use MSTest, the default Microsoft Studio Test).
+
+Do to that, move to the files which contain your class or function 
+and right click (anywhere inside your class or function) and 
+click on "**Create unit tests**".
+![Create Unit Test](./Ressources/createUnitTests.png)
+
+That will open a new window where you can **configure the generation process**.
+<br> For instance: the names of the project. Or if you already have a test project,
+you can generate the methods inside the same script.
+
+Work complete! 
+No, the next step is to **customize and fill your newly generated methods**.
+
+### Manually create a test project
+If you don't want to generate unit tests or if you want to select a different Test Runner, 
+here is the procedure to follow:
+1. Inside the **Solution Explorer**, right click on the solution. Then **Add** => **New project**.
+2. A new window open. You need to select a project type. Click on **all project types** and select **Test**.
+3. Previously, we generated a **MSTest test project** with the C# tag. You can also select an **xUnit** or an **nUnit** project.
+4. Define classes and methods.
+
+*Note: the rest of the tutorial uses an MSTest test project.*
+
+
+
+
+
+
+-------------------------- 
+
+***WORK IN PROGRESS***
+
+--------------------------
+
+
+
 
 ## 4) Automatic unit test
 Unit test on build: 
